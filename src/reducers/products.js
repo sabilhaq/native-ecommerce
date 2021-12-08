@@ -24,7 +24,6 @@ const products = (state = initialState, action) => {
         item.sent = true;
         return item;
       });
-      console.log('loadedProducts:', loadedProducts);
       return {...state, products: loadedProducts};
 
     case LOAD_PRODUCT_SUCCESS:
