@@ -1,8 +1,9 @@
 import ApolloClient from 'apollo-boost';
 import gql from 'graphql-tag';
+import Config from 'react-native-config';
 
 const client = new ApolloClient({
-  uri: 'http://192.168.100.6:3001/graphql',
+  uri: `${Config.REACT_APP_BASE_URL}graphql`,
 });
 
 export const loadProducts = queryStringObj => {
@@ -40,9 +41,10 @@ export const loadProduct = id => {
       getProduct(id: $id) {
         id
         title
-        brand
-        votes
+        rate
+        description
         price
+        brand
         photos
         detail
         UserId

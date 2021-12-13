@@ -4,8 +4,11 @@ import {useDispatch, useSelector, shallowEqual} from 'react-redux';
 import Config from 'react-native-config';
 import {loadMoreProducts, loadProducts} from '../actions';
 import ProductItem from './ProductItem';
+import {useIsFocused} from '@react-navigation/native';
 
-export default function ProductList() {
+export default function ProductList({navigation}) {
+  const isFocused = useIsFocused();
+
   const {products} = useSelector(
     state => ({
       products: state.products,
@@ -16,8 +19,10 @@ export default function ProductList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadProducts({}));
-  }, [dispatch]);
+    if (isFocused) {
+      dispatch(loadProducts({}));
+    }
+  }, [dispatch, isFocused]);
 
   const handleLoadMore = () => {
     if (!products.noData) {
@@ -43,6 +48,7 @@ export default function ProductList() {
         price={item.price}
         photos={photoList}
         UserId={item.UserId}
+        navigation={navigation}
       />
     );
   });

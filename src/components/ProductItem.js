@@ -27,7 +27,7 @@ export default function ProductItem(props) {
       <View style={styles.buttonContainer}>
         <Button
           title="DETAIL ITEM"
-          onPress={() => console.log(`/detail/${props.id}`)}
+          onPress={() => props.navigation.navigate('Detail', {id: props.id})}
         />
       </View>
     </View>

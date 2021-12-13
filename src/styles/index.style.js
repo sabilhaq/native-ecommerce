@@ -11,11 +11,10 @@ export const colors = {
 export default StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: colors.white,
   },
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: 'transparent',
   },
   scrollview: {
     flex: 1,
