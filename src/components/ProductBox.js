@@ -1,4 +1,5 @@
 import React from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import ProductList from './ProductList';
 
 import {
@@ -19,14 +20,20 @@ export default function ProductBox({navigation}) {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const handlePress = async () => {
+    const userId = await AsyncStorage.getItem('userId');
+    if (!userId) {
+      return navigation.navigate('Login');
+    }
+    navigation.navigate('Form');
+  };
+
   return (
     <React.Fragment>
       <SafeAreaView style={backgroundStyle}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <View style={styles.buttonContainer}>
-          <Pressable
-            style={styles.addButton}
-            onPress={() => navigation.navigate('Form')}>
+          <Pressable style={styles.addButton} onPress={handlePress}>
             <Text style={styles.text}>+</Text>
           </Pressable>
         </View>
