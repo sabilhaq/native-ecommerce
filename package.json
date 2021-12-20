@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@native-html/css-processor": "^1.11.0",
     "@react-native-async-storage/async-storage": "^1.15.13",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
@@ -22,11 +23,15 @@
     "react": "17.0.2",
     "react-native": "0.66.3",
     "react-native-config": "^1.4.5",
+    "react-native-htmlview": "^0.16.0",
     "react-native-image-picker": "^4.6.0",
     "react-native-linear-gradient": "^2.5.6",
+    "react-native-pell-rich-editor": "^1.8.6",
+    "react-native-render-html": "^6.3.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-snap-carousel": "^3.9.1",
+    "react-native-webview": "^11.15.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "react-router-native": "^6.0.2",

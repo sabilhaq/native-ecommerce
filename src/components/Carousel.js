@@ -23,6 +23,8 @@ export default class example extends Component {
         even={(index + 1) % 2 === 0}
         parallax={true}
         parallaxProps={parallaxProps}
+        isWithButton={this.props.isWithButton}
+        handleDeletePhoto={this.props.handleDeletePhoto}
       />
     );
   }
@@ -35,7 +37,8 @@ export default class example extends Component {
         <Carousel
           ref={c => (this._slider1Ref = c)}
           data={this.props.carouselImages}
-          renderItem={this._renderItemWithParallax}
+          // renderItem={this._renderItemWithParallax}
+          renderItem={this._renderItemWithParallax.bind(this)}
           sliderWidth={sliderWidth}
           itemWidth={itemWidth}
           hasParallaxImages={true}

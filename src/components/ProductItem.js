@@ -10,7 +10,9 @@ export default function ProductItem(props) {
 
   return (
     <View style={styles.container}>
-      {props.photos && <Carousel carouselImages={props.photos} />}
+      {props.photos && (
+        <Carousel carouselImages={props.photos} isWithButton={false} />
+      )}
 
       <Text style={styles.titleDiv}>Title : {props.title}</Text>
 

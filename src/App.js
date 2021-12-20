@@ -25,7 +25,7 @@ export default function App() {
           <Stack.Screen name="Home" component={ProductBox} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Detail" component={ProductDetail} />
-          <Stack.Screen name="Add" component={ProductForm} />
+          <Stack.Screen name="Form" component={ProductForm} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

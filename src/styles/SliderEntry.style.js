@@ -45,7 +45,7 @@ export default StyleSheet.create({
     borderBottomRightRadius: entryBorderRadius,
   },
   imageContainerEven: {
-    backgroundColor: colors.white,
+    backgroundColor: 'transparent',
   },
   image: {
     ...StyleSheet.absoluteFillObject,
@@ -53,5 +53,31 @@ export default StyleSheet.create({
     borderRadius: IS_IOS ? entryBorderRadius : 0,
     borderTopLeftRadius: entryBorderRadius,
     borderTopRightRadius: entryBorderRadius,
+  },
+  buttonContainer: {
+    position: 'absolute',
+    right: -10,
+    top: -10,
+    zIndex: 99,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'black',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  addButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: 'red',
+  },
+  text: {
+    fontSize: 25,
+    lineHeight: 25,
+    color: 'white',
   },
 });

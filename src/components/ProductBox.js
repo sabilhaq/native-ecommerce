@@ -26,7 +26,7 @@ export default function ProductBox({navigation}) {
         <View style={styles.buttonContainer}>
           <Pressable
             style={styles.addButton}
-            onPress={() => navigation.navigate('Add')}>
+            onPress={() => navigation.navigate('Form')}>
             <Text style={styles.text}>+</Text>
           </Pressable>
         </View>
